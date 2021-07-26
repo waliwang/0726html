@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main-header{
+            background-color: #d1e9d3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+        }
+        .logo img{
+            vertical-align: middle;
+        }
+        #menu-control{
+            position: absolute;
+            top: 0;
+            left: -30px;
+        }
+        .main-nav a{
+            text-decoration: none;
+        }
+        @media screen and (max-width: 767px) {
+
+            .main-nav{
+                position: absolute;
+                top: 100%;
+                left: -100%;
+                opacity: 0;
+                width: 100%;
+                background-color: #fa0;
+            }
+            .main-nav a{
+                display: block;
+                padding: 10px;
+                color: #fff;
+            }
+            .main-nav a:not(:first-child){
+                border-top: 1px solid #fff;
+            }
+            #menu-control:checked ~ .main-header .main-nav{
+                left: 0;
+                opacity: 1;
+                transition: opacity 1s;
+            }
+            .btn-hb{
+                width: 40px;
+                height: 40px;
+                background-color: #aaa;
+                position: relative;
+            }
+            .btn-hb .bar{
+                width: 86%;
+                height: 4px;
+                background-color: #666;
+                /* display: block; */
+                position: absolute;
+                top: 18px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                transition: 1s;
+            }
+            .btn-hb .bar:first-child{
+                /* transform: translateY(-10px); */
+                top: 10px;
+            }
+            .btn-hb .bar:last-child{
+                /* transform: translateY(10px); */
+                top: 26px;
+            }
+            #menu-control:checked ~ .main-header .btn-hb .bar:first-child{
+                top: 18px;
+            }
+            #menu-control:checked ~ .main-header .btn-hb .bar:last-child{
+                top: 18px;
+            }
+            
+        }
+        @media screen and (min-width: 768px) {
+            .main-nav a{
+                display: inline-block;
+                padding: 10px;
+                color: #000;
+            }
+        }
+        @media screen and (min-width: 768px) and (hover :hover) {
+            .main-nav a:hover{
+                color: #f00;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-control">
+
+    <header class="main-header">
+        <a href="#" class="logo">
+            <img src="https://fakeimg.pl/100x40/">
+        </a>
+
+        <label class="btn-hb"  for="menu-control">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <nav class="main-nav">
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+       
+    </header>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eligendi voluptate possimus minima odit ad culpa animi nihil ea vero temporibus vitae, saepe sed tenetur repellendus quos? Iste, libero officiis.</p>
+</body>
+</html>

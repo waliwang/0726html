@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.main-header{
+			background-color: #d1e9d3;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px;
+			position: sticky;
+			top: 0;
+		}
+		.logo img{
+			vertical-align: middle;
+		}
+		#menu-control{
+			position: fixed;
+			top: 0;
+			left: -30px;
+		}
+		.main-nav a{
+			text-decoration: none;
+		}
+		@media screen and (max-width: 767px) {
+			.main-nav{
+				position: absolute;
+				top: 100%;
+				left: -100%;
+				opacity: 0;
+				width: 100%;
+				background-color: #f585a0;
+				transition: 1s;
+			}
+			.main-nav a{
+				display: block;
+				padding: 10px;
+				color: #fff;
+			}
+			.main-nav a:not(:first-child){
+				border-top: 1px solid #fff;
+			}
+			#menu-control:checked ~ .main-header .main-nav{
+				left: 0;
+				opacity: 1;
+			}
+			.btn-hb{
+				width: 40px;
+				height: 40px;
+				background-color: #aaa;
+				position: relative;
+			}
+			.btn-hb .bar{
+				width: 86%;
+				height: 4px;
+				background-color: #666;
+				/*display: block;*/
+				position: absolute;
+				top: 18px;
+				right: 0;
+				left: 0;
+				opacity: 1;
+				margin: auto;
+			}
+			.btn-hb .bar:first-child{
+				top: 10px;
+				transform: rotate(0deg);
+			}
+			.btn-hb .bar:last-child{
+				top: 26px;
+				transform: rotate(0deg);
+			}
+			#menu-control:checked ~ .main-header .btn-hb .bar:nth-child(2){
+				opacity: 0;
+				transition: opacity .3s;
+			}
+			#menu-control:checked ~ .main-header .btn-hb .bar:first-child{
+				top: 18px;
+				transform: rotate(45deg);
+				transition: top .3s, transform .3s .3s;
+			}
+			#menu-control:checked ~ .main-header .btn-hb .bar:last-child{
+				top: 18px;
+				transform: rotate(135deg);
+				transition: top .3s, transform .3s .3s;
+			}
+		}
+		@media screen and (min-width: 768px) {
+			.main-nav a{
+				display: inline-block;
+				padding: 10px;
+				color: #000;
+			}
+		}
+		@media screen and (min-width: 768px) and (hover: hover) {
+			.main-nav a:hover{
+				color: #f00;
+			}
+		}
+	</style>
+</head>
+<body>
+	<input type="checkbox" name="" id="menu-control">
+
+	<header class="main-header">
+		<a href="#" class="logo">
+			<img src="https://fakeimg.pl/100x40/?text=logo">
+		</a>
+
+		<label class="btn-hb" for="menu-control">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</label>
+
+		<nav class="main-nav">
+			<a href="#">link</a>
+			<a href="#">link</a>
+			<a href="#">link</a>
+			<a href="#">link</a>
+			<a href="#">link</a>
+			<a href="#">link</a>
+		</nav>
+	</header>
+
+	<!-- ======================================== -->
+
+	<p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis veniam sequi pariatur facere quibusdam aut temporibus iure quis mollitia ab consequuntur quasi modi nesciunt, saepe accusantium adipisci labore dolorem, quod.</p>
+	<p>Quod dolorem soluta doloremque laudantium eaque sequi doloribus ipsam excepturi amet maxime, quia atque nihil dicta voluptas praesentium enim harum corporis alias ipsum eligendi provident nisi nobis facilis animi. Veritatis!</p>
+	<p>Nostrum praesentium laudantium blanditiis ea sequi quod autem reprehenderit minima cumque nesciunt mollitia quos, tempore, nam voluptatem, a nobis est vel voluptas earum exercitationem sint! Similique iste ipsam ipsum animi.</p>
+	<p>Facere quasi doloribus, explicabo. Beatae eveniet at aliquam quia odit voluptate eos praesentium libero incidunt, aperiam dolor vero fuga saepe officia commodi exercitationem atque, laudantium adipisci corrupti reiciendis nemo minus.</p>
+	<p>Deleniti sed fugiat officia, nesciunt veniam libero odit nihil molestiae error, pariatur quibusdam. Officia impedit harum, nesciunt. Minus alias dolorum vel cupiditate quis! Tenetur nihil ipsum error facere, libero, aliquam.</p>
+	<p>Quas, alias nemo praesentium dolore rerum et temporibus numquam est maiores ea soluta ex. Fugiat sint nisi neque est cum totam pariatur repellendus. Magni, sed aliquam fugiat deleniti doloremque, excepturi.</p>
+	<p>Ullam eos natus maxime fuga et placeat provident ex ea? Quidem quis ut qui omnis dolorem perspiciatis nihil, cum ab tempore aliquid magnam laudantium obcaecati consequatur numquam, veniam debitis! Cupiditate.</p>
+	<p>Aspernatur eligendi ducimus quidem, voluptas ut unde sint dolores laborum fuga fugit perspiciatis, asperiores voluptatum veniam recusandae reiciendis quos at neque explicabo esse sed, molestias praesentium rerum sit minima enim!</p>
+	<p>Reiciendis impedit modi explicabo aliquam tempora voluptatem eum doloremque tempore aspernatur quos, officia debitis molestiae tenetur. Molestias id repellat magni suscipit cumque, incidunt atque explicabo aliquam nesciunt perferendis, excepturi! Nam?</p>
+	<p>Debitis ipsa, fuga impedit voluptate vero, explicabo accusamus est repellendus corrupti repellat magnam natus, magni. Quas non asperiores debitis nisi quo illum molestias ducimus itaque doloremque labore, ratione maiores, soluta.</p>
+	<p>Atque eum dolorem saepe, quaerat quo cupiditate aut deleniti debitis cum. Quod facere reiciendis at, pariatur rem dolor recusandae, ut tempore perferendis hic reprehenderit, voluptatem impedit, nemo accusamus quia. Error?</p>
+	<p>Amet corporis laudantium est esse ea totam, eos delectus inventore rem tempora, incidunt excepturi dicta natus non, similique maxime omnis soluta voluptas recusandae et, accusantium libero ullam ducimus exercitationem at?</p>
+	<p>Ex, quis ab officia possimus accusamus sit voluptatum necessitatibus vitae perferendis totam saepe ducimus sed quisquam harum dolorem eum dolore consectetur sequi rem quo distinctio nisi! Accusantium aliquid nam, odio!</p>
+	<p>Quibusdam eius fuga ratione porro repellat cupiditate delectus alias sed sit illo est nam provident officia quas temporibus perferendis at, mollitia totam laudantium magni culpa ab! Harum laudantium facilis eum.</p>
+	<p>Dolore voluptas a voluptates ut dolorum ipsum, aliquid sint repellat at iste officiis deserunt, illum pariatur, mollitia eligendi, sequi molestias! Soluta vero possimus ducimus magnam id distinctio, aliquam unde amet.</p>
+	<p>Deleniti tempora, corrupti consequuntur necessitatibus deserunt? Amet vero voluptatum omnis aperiam rem ut possimus porro nesciunt delectus! Et amet ea, quis officiis numquam veritatis beatae nemo molestias iste! Voluptates, atque.</p>
+	<p>Quam veniam, reiciendis molestias expedita error eius nisi minus voluptate, ipsum suscipit quisquam magni possimus a maiores delectus distinctio et enim sunt corporis sed numquam tempore voluptatibus perspiciatis? In, consequatur.</p>
+	<p>Voluptatum ducimus consectetur, sint enim corrupti delectus repudiandae illo perferendis est dignissimos accusantium ex modi minima ea asperiores aliquam. Minima, laborum adipisci necessitatibus nostrum in dolorem ut, ab error illo.</p>
+	<p>Amet repellendus similique sed ipsa eius delectus corrupti hic possimus iusto mollitia facilis neque magni dolor illo dolorem vel, pariatur aliquid, minima officia adipisci. Perferendis sunt ad illum illo, veritatis.</p>
+	<p>Quam sint explicabo sapiente placeat nostrum, tempora distinctio, voluptas assumenda earum fugiat, eveniet enim repellendus molestiae numquam laborum harum, voluptate deleniti incidunt dicta ad ex aspernatur deserunt aperiam et. Voluptatem?</p>
+
+
+
+	
+</body>
+</html>
